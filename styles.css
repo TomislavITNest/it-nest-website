@@ -1,0 +1,258 @@
+/* General Reset */
+/* General Reset */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #1c1f1b;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    padding: 1rem 20px; /* Consistent padding for alignment */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Horizontal padding for consistent alignment */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+  .nav-links {
+    display: flex;
+    gap: 1.5rem; /* Add spacing between links */
+  }
+  .nav-links li a {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  .nav-links li a:hover {
+    color: #66ffb3;
+  }
+  
+  .nav-links-item.active {
+    color: #66ffb3;
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 80vh; /* Full-screen height */
+    background: url('image.webp') center/cover no-repeat; /* Your WebP image */
+    background-size: cover; /* Ensure it covers the entire section */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 253, 208, 0.35); /* Semi-transparent light yellow overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay h1 {
+    font-size: 3rem;
+    color: #e6ffee;
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 1rem 20px; /* Consistent padding for alignment */
+  }
+  .footer-left, .footer-right {
+    color: white;
+  }
+  .footer-left {
+    float: left;
+  }
+  .footer-right {
+    float: right;
+    text-align: right;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 4rem 20px;
+    background-color: #66ffb3; /* Complementary Color */
+  }
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #2f2f2f;
+  }
+  .cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap; /* Makes it responsive */
+  }
+  .card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 2rem); /* Responsive 50% width with gaps */
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #004d33;
+    margin-bottom: 1rem;
+  }
+  .card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Contact Card */
+  .contact-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .contact-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #004d33;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-info strong {
+    color: #004d33;
+  }
+  
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .container {
+      flex-direction: column; /* Stack the navbar items vertically */
+      align-items: center; /* Center the items horizontally */
+      text-align: center; /* Center text for better readability */
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 1rem; /* Vertical gap between links */
+      align-items: center; /* Center links */
+      margin-top: 1rem; /* Add some space between the brand and the links */
+    }
+  
+    .hero {
+      height: 60vh; /* Adjust hero section height for smaller screens */
+    }
+  
+    .overlay h1 {
+      font-size: 2rem; /* Smaller font size for mobile screens */
+    }
+  
+    .services {
+      padding: 3rem 20px; /* Reduced padding for mobile */
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .cards {
+      flex-direction: column; /* Stack the cards vertically */
+      gap: 1.5rem; /* Vertical gap between cards */
+    }
+  
+    .card {
+      flex: 1 1 100%; /* Full width on small screens */
+      max-width: 100%; /* Ensure full width */
+      padding: 1.5rem; /* Reduced padding for mobile */
+    }
+  
+    .contact-card {
+      width: 100%;
+      max-width: 400px; /* Adjust width for mobile */
+    }
+  
+    /* Footer adjustments */
+    footer {
+      padding: 1.5rem 20px;
+      text-align: center; /* Center the footer content */
+    }
+  
+    .footer-left,
+    .footer-right {
+      float: none; /* Remove float for stacking */
+      text-align: center; /* Center text */
+      margin-bottom: 1rem; /* Add margin between the items */
+    }
+  
+    .footer-left {
+      margin-bottom: 1rem; /* Add margin to separate it from the right part */
+    }
+  
+    .footer-right {
+      margin-top: 1rem; /* Add margin to separate it from the left part */
+    }
+  }
+  
+  /* Media Query for Extra Small Devices (Mobile) */
+  @media (max-width: 480px) {
+    .hero {
+      height: 50vh; /* Even smaller hero height for very small devices */
+    }
+  
+    .overlay h1 {
+      font-size: 1.5rem; /* Further reduced font size */
+    }
+  
+    .nav-brand {
+      font-size: 1.2rem; /* Slightly smaller brand name */
+    }
+  
+    .nav-links {
+      gap: 1rem;
+    }
+  
+    .contact-card h2 {
+      font-size: 1.5rem; /* Smaller heading size on small screens */
+    }
+  
+    .contact-info p {
+      font-size: 1rem; /* Adjust paragraph font size */
+    }
+  }
